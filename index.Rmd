@@ -52,3 +52,7 @@ This is Ted
 Also here's the "backstage" in Alumni Auditorium.
 
 ![]()
+
+# Other stuff on this page
+
+Definitely there is [plotly](plotly.html) stuff!
