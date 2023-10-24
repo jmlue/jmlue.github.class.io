@@ -1,0 +1,42 @@
+---
+title: "plotly"
+author: "Jesus Luevano"
+date: "2023-10-24"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+library(plotly)
+
+library(p8105.datasets)
+```
+
+
+Focus on NYC Airbnb data.
+
+```{r}
+data("nyc_airbnb")
+
+nyc_airbnb = 
+  nyc_airbnb %>%
+  mutate(stars = review_scores_location / 2) %>%
+  select(borough = neighbourhood_group,
+         neighbourhood, stars, price, room_type, lat, long) %>%
+  drop_na(stars) %>%
+  filter(
+    borough == "Manhattan",
+    room_type == "Entire home/apt",
+    price %in% 100:500
+  )
+```
+
+Let's make a scatterplot!
+
+```{r}
+nyc_airbnb %>%
+  plot_ly(
+    x = ~lat, y = ~long, color= ~price,
+    type = "scatter", mode = "markers")
+```
+
