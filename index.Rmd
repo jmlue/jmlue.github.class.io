@@ -7,7 +7,7 @@ output:
     theme: cerulean
 ---
 
-# This is Jeff's awesome website
+# This is JM's awesome website
 
 Here's a gif of Elmo
 
@@ -56,3 +56,7 @@ Also here's the "backstage" in Alumni Auditorium.
 # Other stuff on this page
 
 Definitely there is [plotly](plotly.html) stuff!
+
+# Our Dashboard
+
+Also a [dashboard](dashboard.html) to see!
